@@ -69,7 +69,8 @@ def export_mch_data(dir_data, dir_output, domain, year_start, year_end, mask_pat
     # Rename variables
     ds = ds.rename({var_name_input: var_name_output, 'E': 'x', 'N': 'y'})
 
-    ds.reindex(y=list(reversed(ds.y)))
+    # Reverse y-axis to match expected orientation
+    ds = ds.reindex(y=list(reversed(ds.y)))
 
     # Load mask
     if mask_path:
