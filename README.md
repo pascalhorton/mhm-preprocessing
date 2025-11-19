@@ -3,9 +3,8 @@
 These were designed for Swiss datasets, but can be adapted to other contexts.
 
 The provided scripts are:
-- extract_meteo_data.py : Extraction 
-- flowacc_hydrosnap_example.py
-- flowacc_hydrosnap_example2.py
-- flowacc_pysheds_only.py
-- prepare_morpho_grids.py
-- recondition_dem.py
+- extract_meteo_data.py : Extraction of the meteorological forcing data.
+- flowacc_hydrosnap.py : Computation of flow accumulation using hydro-snap (https://github.com/pascalhorton/hydro-snap) that proceeds to a DEM reconditioning prior to the calculation of the flow accumulation.
+- flowacc_pysheds.py : Computation of flow accumulation using pysheds, without DEM reconditioning.
+- prepare_morpho_grids.py : Preparation of morphological grids required by mHM.
+
